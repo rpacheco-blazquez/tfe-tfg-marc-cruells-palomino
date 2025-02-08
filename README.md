@@ -2,4 +2,4 @@
 
 ## task1-learn2mesh
 
-[Documentation to task 1 (plotting meshes)](docs/README.md)
+[Documentation of task 1](task1-learn2mesh/README.md)
