@@ -16,7 +16,7 @@ Each mesh data is saved in the following formats:
     print(mesh_data.nodes)  # Access nodes from mesh_data.py
     print(mesh_data.elements)  # Access elements from mesh_data.p
     ```
-    If the folder structure is:
+    Where `mesh_data` is the name of any of the meshes with the extension .py inside `saved-mesh` folder. This works if the folder structure is:
     ```bash
     task1-learn2mesh/
     ├── main.py  # Your main script
