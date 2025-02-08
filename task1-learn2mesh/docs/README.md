@@ -1,0 +1,129 @@
+# Meshes Generated for TFE-TFG Marc Cruells Palomino
+
+This repository contains various 2D and 3D meshes generated for the *task1-learn2mesh* project. Below is an overview of each mesh type, including Python and text data files, as well as visualizations of the generated grids.
+
+## Mesh Types
+
+### 1. **Head Mesh (Irregular)**
+
+- **Files:**
+    - `malla_head_irregular_data.py`: Python script with the mesh data.
+    - `malla_head_irregular_data.stl`: STL file for 3D representation.
+    - `malla_head_irregular_data.txt`: Human-readable text file containing nodal and connectivity matrix data.
+
+- **Description:**
+    This mesh is based on an irregular head shape, generated using random perturbations. It represents a 3D irregular surface and is stored in multiple formats (Python script, STL, and text).
+
+- **Visualization:**
+
+![Head Mesh Visualization](docs/img/malla_head_irregular.png)
+
+---
+
+### 2. **1D Wave Mesh**
+
+- **Files:**
+    - `malla_onda_1d_data.py`: Python script with the mesh data.
+    - `malla_onda_1d_data.txt`: Human-readable text file containing nodal and connectivity matrix data.
+
+- **Description:**
+    A 1D wave mesh is generated based on a sinusoidal wave pattern with defined frequencies and amplitudes. The mesh is represented in 1D, but with a 3D visualization showing the wave displacement.
+
+- **Visualization:**
+
+![1D Wave Mesh](docs/img/malla_onda_1d.png)
+
+---
+
+### 3. **2D Irregular Wave Mesh**
+
+- **Files:**
+    - `malla_onda_2d_irregular_data.py`: Python script with the mesh data.
+
+- **Description:**
+    This mesh represents a 2D irregular wave pattern. It has been generated using random perturbations along the x and y directions.
+
+- **Visualization:**
+
+![2D Irregular Wave Mesh](docs/img/malla_onda_2d_irregular.png)
+
+---
+
+### 4. **Simple Rectangular Mesh**
+
+- **Files:**
+    - `malla_simple_data.py`: Python script with the mesh data.
+    - `malla_simple_data.txt`: Human-readable text file containing nodal and connectivity matrix data.
+
+- **Description:**
+    This is a simple rectangular grid mesh where the nodes are evenly spaced in the x and y directions. It is often used as a basic starting point for mesh generation and analysis.
+
+- **Visualization:**
+
+![Simple Rectangular Mesh](docs/img/malla_simple.png)
+
+---
+
+### 5. **Simple Triangular Mesh**
+
+- **Files:**
+    - `malla_simple_tri_data.py`: Python script with the mesh data.
+    - `malla_simple_tri_data.txt`: Human-readable text file containing nodal and connectivity matrix data.
+
+- **Description:**
+    This is a triangular mesh formed over a rectangular domain. It consists of nodes arranged in a grid with triangular elements defined by the connectivity matrix.
+
+- **Visualization:**
+
+![Simple Triangular Mesh](docs/img/malla_simple_tri.png)
+
+---
+
+### 6. **1D Irregular Wave Mesh (Data)**
+
+- **Files:**
+    - `mesh_onda_1d_irregular_data.py`: Python script with the mesh data for the 1D irregular wave.
+
+- **Description:**
+    This mesh represents a 1D wave with irregular displacements based on random phases, defined frequencies, and amplitudes. It provides an irregular wave profile for testing and analysis.
+
+---
+
+## Mesh Data Format
+
+Each mesh data is saved in the following formats:
+
+- **Python format** (`.py`): This format contains the mesh data in Python script form, allowing you to directly load and manipulate the mesh using Python.
+  
+- **Text format** (`.txt`): This format is human-readable and contains the nodal and connectivity matrices, structured as follows:
+
+    - **Nodal Matrix:**
+      ```
+      nodal matrix
+      begin values
+      i, x, y, (z)  # For 2D or 3D meshes
+      ...
+      end values
+      ```
+
+    - **Connectivity Matrix:**
+      ```
+      connectivity matrix
+      begin values
+      i, n1, n2, (n3), (n4)  # For triangles or quadrilaterals
+      ...
+      end values
+      ```
+
+## How to Load the Meshes
+
+1. Clone or download the repository.
+2. Use the `meshing.py` module to load the mesh data.
+3. Use the `plotting.py` module to visualize the meshes.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
