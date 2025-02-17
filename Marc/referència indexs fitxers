@@ -1,0 +1,6 @@
+format: lletra_número1_número2_nom
+
+lletra = lletra de l'exercici, en ordre
+número1 = 1 si és data (enunciat), 2 si és solució (codi fet per mi)
+número2 = 1 si el fitxer data del qual prové era en format .py, 2 si era .txt, 3 si és la representació en 3d
+nom = nom del fitxer original
