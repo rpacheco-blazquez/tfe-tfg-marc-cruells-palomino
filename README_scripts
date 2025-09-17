@@ -1,0 +1,20 @@
+Ordre i funcions dels scripts:
+
+1 - seaFEM2blender.py
+    · Llegeix el fitxer .flavia (geometria de la superfície lliure) i el .txt amb els xyz per timestep.
+    · Construeix la malla 3D a Blender i crea shape keys per animar l’evolució temporal.
+    · Afegeix boies (esferes) en nodes seleccionats, amb materials de colors diferenciats.
+    · Crea les trajectòries de les boies perquè quedin animades.
+
+2 - calibra_global_p2m.py
+    · Llegeix anotacions (COCO) i dades físiques (XYZ) per vincular posicions en píxels amb metres reals.
+    · Calcula regressions globals i per cada node per obtenir la relació metres/píxel.
+    · Desa un fitxer JSON amb l’equació de calibratge i resultats detallats.
+    · Mostra un informe amb coeficients, R² i extrems de cada boia.
+
+3 - deteccions.py
+    · Detecta i trackeja boies en seqüències de frames amb un model Roboflow.
+    · Força la coherència (4 boies fixes) i assigna ID/rank estable.
+    · Aplica el calibratge per convertir píxels a metres i desa CSV/JSON amb sèries temporals.
+    · Calcula paràmetres d’onades (Hs, Hmax, Tp, Tz) amb FFT.
+    · Genera gràfics, CSV d’espectres/onades i vídeos amb les trajectòries i l’overlay de la sèrie.
